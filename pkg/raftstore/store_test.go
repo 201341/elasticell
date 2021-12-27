@@ -1,9 +1,10 @@
 package raftstore
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/storage"
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/storage/memory"
+	"github.com/201341/elasticell/pkg/util"
 	. "github.com/pingcap/check"
 )
 
@@ -62,7 +63,7 @@ func (s *storeTestSuite) TestGetTargetCell(c *C) {
 
 func (s *storeTestSuite) TestCleanup(c *C) {
 	store := new(Store)
-	store.engines = []storage.Driver{storage.NewMemoryDriver()}
+	store.engines = []storage.Driver{memory.NewMemoryDriver()}
 	store.enginesMask = uint64(len(store.engines) - 1)
 	store.keyRanges = util.NewCellTree()
 	store.keyRanges.Update(metapb.Cell{
@@ -115,7 +116,7 @@ func (s *storeTestSuite) TestCleanup(c *C) {
 
 func (s *storeTestSuite) TestClearMeta(c *C) {
 	store := new(Store)
-	store.engines = []storage.Driver{storage.NewMemoryDriver()}
+	store.engines = []storage.Driver{memory.NewMemoryDriver()}
 	store.enginesMask = uint64(len(store.engines) - 1)
 	store.keyRanges = util.NewCellTree()
 	c1 := metapb.Cell{

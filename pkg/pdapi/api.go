@@ -19,8 +19,8 @@ import (
 	"io/ioutil"
 	"regexp"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
 	"github.com/pkg/errors"
 )
 

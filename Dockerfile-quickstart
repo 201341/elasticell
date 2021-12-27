@@ -1,14 +1,14 @@
 FROM deepfabric/build as builder
 
-COPY . /root/go/src/github.com/deepfabric/elasticell
-WORKDIR /root/go/src/github.com/deepfabric/elasticell
+COPY . /root/go/src/github.com/201341/elasticell
+WORKDIR /root/go/src/github.com/201341/elasticell
 RUN make release
 
 FROM deepfabric/centos
 
-COPY --from=builder /root/go/src/github.com/deepfabric/elasticell/dist/cell /usr/local/bin/cell
-COPY --from=builder /root/go/src/github.com/deepfabric/elasticell/dist/pd /usr/local/bin/pd
-COPY --from=builder /root/go/src/github.com/deepfabric/elasticell/dist/proxy /usr/local/bin/proxy
+COPY --from=builder /root/go/src/github.com/201341/elasticell/dist/cell /usr/local/bin/cell
+COPY --from=builder /root/go/src/github.com/201341/elasticell/dist/pd /usr/local/bin/pd
+COPY --from=builder /root/go/src/github.com/201341/elasticell/dist/proxy /usr/local/bin/proxy
 
 RUN mkdir -p /apps/deepfabric/cfg \
     && mkdir -p /apps/deepfabric/log \

@@ -16,8 +16,8 @@ package pdserver
 import (
 	"fmt"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
 )
 
 type transferLeaderOperator struct {

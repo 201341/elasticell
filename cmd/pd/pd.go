@@ -22,8 +22,8 @@ import (
 	"syscall"
 	"time"
 
-	server "github.com/deepfabric/elasticell/pkg/pdserver"
-	"github.com/deepfabric/elasticell/pkg/util"
+	server "github.com/201341/elasticell/pkg/pdserver"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/log"
 )
 

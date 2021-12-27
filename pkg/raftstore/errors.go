@@ -16,10 +16,10 @@ package raftstore
 import (
 	"errors"
 
-	"github.com/deepfabric/elasticell/pkg/pb/errorpb"
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
-	"github.com/deepfabric/elasticell/pkg/pool"
+	"github.com/201341/elasticell/pkg/pb/errorpb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/pool"
 )
 
 var (

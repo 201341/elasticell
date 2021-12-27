@@ -3,7 +3,7 @@ package proxy
 import (
 	"errors"
 
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
 	"github.com/fagongzi/goetty/protocol/redis"
 	"github.com/fagongzi/util/format"
 )

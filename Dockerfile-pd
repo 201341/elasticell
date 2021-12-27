@@ -1,14 +1,14 @@
 FROM deepfabric/build as builder
 
-COPY . /root/go/src/github.com/deepfabric/elasticell
-WORKDIR /root/go/src/github.com/deepfabric/elasticell
+COPY . /root/go/src/github.com/201341/elasticell
+WORKDIR /root/go/src/github.com/201341/elasticell
 
 RUN make pd
 
 
 FROM alpine:latest
 
-COPY --from=builder /root/go/src/github.com/deepfabric/elasticell/dist/pd /usr/local/bin/pd
+COPY --from=builder /root/go/src/github.com/201341/elasticell/dist/pd /usr/local/bin/pd
 
 RUN mkdir -p /var/pd/
 RUN mkdir -p /var/lib/pd/

@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
-	"github.com/deepfabric/elasticell/pkg/pd"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pd"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/grpclog"
 )

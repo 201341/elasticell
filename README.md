@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/deepfabric/elasticell.svg?branch=master)](https://travis-ci.org/deepfabric/elasticell)
-[![Go Report Card](https://goreportcard.com/badge/github.com/deepfabric/elasticell)](https://goreportcard.com/report/github.com/deepfabric/elasticell)
+[![Build Status](https://travis-ci.org/201341/elasticell.svg?branch=master)](https://travis-ci.org/201341/elasticell)
+[![Go Report Card](https://goreportcard.com/badge/github.com/201341/elasticell)](https://goreportcard.com/report/github.com/201341/elasticell)
 ![Project Status](https://img.shields.io/badge/status-alpha-yellow.svg)
 
 ## What is Elasticell?

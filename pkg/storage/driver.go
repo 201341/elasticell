@@ -13,7 +13,7 @@
 
 package storage
 
-import "github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+import "github.com/201341/elasticell/pkg/pb/raftcmdpb"
 
 // WriteBatch batch operation
 type WriteBatch interface {

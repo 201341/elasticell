@@ -16,9 +16,9 @@ package pdserver
 import (
 	"time"
 
+	meta "github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
 	"github.com/fagongzi/log"
-	meta "github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
 )
 
 // Operator is an interface to scheduler cell

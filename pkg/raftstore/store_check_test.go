@@ -1,8 +1,9 @@
 package raftstore
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/mraft"
-	"github.com/deepfabric/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/pb/mraft"
+	"github.com/201341/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/storage/memory"
 	. "github.com/pingcap/check"
 )
 
@@ -32,6 +33,6 @@ func (s *storeTestSuite) TestIsRaftMsgValid(c *C) {
 
 func (s *storeTestSuite) TestIsMsgStale(c *C) {
 	store := new(Store)
-	store.engines = []storage.Driver{storage.NewMemoryDriver()}
+	store.engines = []storage.Driver{memory.NewMemoryDriver()}
 	store.enginesMask = uint64(len(store.engines) - 1)
 }

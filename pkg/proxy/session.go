@@ -3,8 +3,8 @@ package proxy
 import (
 	"sync"
 
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
-	credis "github.com/deepfabric/elasticell/pkg/redis"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
+	credis "github.com/201341/elasticell/pkg/redis"
 	"github.com/fagongzi/goetty"
 	"github.com/fagongzi/goetty/protocol/redis"
 	"github.com/fagongzi/log"

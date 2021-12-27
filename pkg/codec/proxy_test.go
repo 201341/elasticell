@@ -14,7 +14,7 @@
 package codec
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
 	"github.com/fagongzi/goetty"
 	. "github.com/pingcap/check"
 )

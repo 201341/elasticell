@@ -3,9 +3,9 @@ package raftstore
 import (
 	"bytes"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/mraft"
-	"github.com/deepfabric/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/mraft"
+	"github.com/201341/elasticell/pkg/storage/memory"
 	"github.com/fagongzi/util/protoc"
 	. "github.com/pingcap/check"
 )
@@ -85,7 +85,7 @@ func (s *utilTestSuite) TestCheckKeyInCell(c *C) {
 }
 
 func (s *utilTestSuite) TestSaveCell(c *C) {
-	d := storage.NewMemoryDriver()
+	d := memory.NewMemoryDriver()
 
 	cell := metapb.Cell{
 		ID:    1,

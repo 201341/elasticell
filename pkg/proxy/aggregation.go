@@ -3,7 +3,7 @@ package proxy
 import (
 	"strconv"
 
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
 )
 
 var (

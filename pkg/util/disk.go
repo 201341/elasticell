@@ -14,7 +14,7 @@
 package util
 
 import (
-	"github.com/shirou/gopsutil/disk"
+	"github.com/shirou/gopsutil/v3/disk"
 )
 
 // DiskStats returns the disk usage stats

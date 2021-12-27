@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/codec"
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/codec"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
 	"github.com/fagongzi/goetty"
 	"github.com/fagongzi/log"
 	"github.com/fagongzi/util/task"

@@ -185,7 +185,7 @@ Elasticell use RocksDB as storage engine, so need install some dependency packag
 
 #### Pull Elasticell Image
 ```bash
-docker pull deepfabric/elasticell-build
+docker pull 201341/elasticell-build
 ```
 
 ##### Create dist folder
@@ -195,22 +195,22 @@ docker pull deepfabric/elasticell-build
 
 ##### Build PD
 ```bash
-docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=pd -e ELASTICELL_BUILD_VERSION=master deepfabric/elasticell-build 
+docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=pd -e ELASTICELL_BUILD_VERSION=master 201341/elasticell-build 
 ```
 
 ##### Build Cell
 ```bash
-docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=cell -e ELASTICELL_BUILD_VERSION=master deepfabric/elasticell-build 
+docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=cell -e ELASTICELL_BUILD_VERSION=master 201341/elasticell-build 
 ```
 
 ##### Build Proxy
 ```bash
-docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=proxy -e ELASTICELL_BUILD_VERSION=master deepfabric/elasticell-build 
+docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=proxy -e ELASTICELL_BUILD_VERSION=master 201341/elasticell-build 
 ```
 
 ##### Build all binary
 ```bash
-docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=all -e ELASTICELL_BUILD_VERSION=master deepfabric/elasticell-build 
+docker run -it --rm -v /apps/deepfabric/dist:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=all -e ELASTICELL_BUILD_VERSION=master 201341/elasticell-build 
 ```
 
 ##### Install some package on Cell node

@@ -17,10 +17,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
-	"github.com/deepfabric/elasticell/pkg/pd"
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pd"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/log"
 )
 

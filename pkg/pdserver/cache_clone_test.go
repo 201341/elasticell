@@ -14,7 +14,7 @@
 package pdserver
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
 	. "github.com/pingcap/check"
 )
 
