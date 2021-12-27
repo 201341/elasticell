@@ -11,10 +11,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package storage
+package memory
 
 import (
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/util/format"
 	"github.com/fagongzi/util/hack"
 )
@@ -23,7 +24,7 @@ type memoryKVEngine struct {
 	kv *util.KVTree
 }
 
-func newMemoryKVEngine(kv *util.KVTree) KVEngine {
+func newMemoryKVEngine(kv *util.KVTree) storage.KVEngine {
 	return &memoryKVEngine{
 		kv: kv,
 	}
@@ -85,11 +86,11 @@ func (e *memoryKVEngine) StrLen(key []byte) (int64, error) {
 	return 0, nil
 }
 
-func (e *memoryKVEngine) NewWriteBatch() WriteBatch {
+func (e *memoryKVEngine) NewWriteBatch() storage.WriteBatch {
 	return newMemoryWriteBatch()
 }
 
-func (e *memoryKVEngine) Write(wb WriteBatch) error {
+func (e *memoryKVEngine) Write(wb storage.WriteBatch) error {
 	mwb := wb.(*memoryWriteBatch)
 
 	for _, opt := range mwb.opts {

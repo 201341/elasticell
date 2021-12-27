@@ -13,28 +13,25 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo
 
 import (
-	gonemo "github.com/deepfabric/go-nemo"
+	"testing"
+
+	. "github.com/pingcap/check"
 )
 
-type nemoWriteBatch struct {
-	wb *gonemo.WriteBatch
-}
+var _ = Suite(&testNemoKVSuite{})
+var _ = Suite(&testNemoHashSuite{})
+var _ = Suite(&testNemoListSuite{})
+var _ = Suite(&testNemoSetSuite{})
+var _ = Suite(&testNemoZSetSuite{})
 
-func newNemoWriteBatch(wb *gonemo.WriteBatch) WriteBatch {
-	return &nemoWriteBatch{
-		wb: wb,
-	}
-}
+var _ = Suite(&testNemoDataSuite{})
+var _ = Suite(&testNemoMetaSuite{})
 
-func (n *nemoWriteBatch) Delete(key []byte) error {
-	n.wb.WriteBatchDel(key)
-	return nil
-}
+var _ = Suite(&testNemoWBSuite{})
 
-func (n *nemoWriteBatch) Set(key []byte, value []byte) error {
-	n.wb.WriteBatchPut(key, value)
-	return nil
+func TestNemo(t *testing.T) {
+	TestingT(t)
 }

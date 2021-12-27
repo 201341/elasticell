@@ -13,13 +13,13 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/util"
 	. "github.com/pingcap/check"
 )
 

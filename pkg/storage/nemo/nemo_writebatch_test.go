@@ -13,16 +13,17 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo
 
 import (
 	"os"
 
+	"github.com/201341/elasticell/pkg/storage"
 	. "github.com/pingcap/check"
 )
 
 type testNemoWBSuite struct {
-	driver Driver
+	driver storage.Driver
 }
 
 func (s *testNemoWBSuite) SetUpSuite(c *C) {
@@ -56,13 +57,13 @@ func (s *testNemoWBSuite) TestWB(c *C) {
 	s.checkExists(key3, c)
 }
 
-func (s *testNemoWBSuite) set(wb WriteBatch, key []byte, c *C) {
+func (s *testNemoWBSuite) set(wb storage.WriteBatch, key []byte, c *C) {
 	value := []byte("kv-value")
 	err := wb.Set(key, value)
 	c.Assert(err, IsNil)
 }
 
-func (s *testNemoWBSuite) delete(wb WriteBatch, key []byte, c *C) {
+func (s *testNemoWBSuite) delete(wb storage.WriteBatch, key []byte, c *C) {
 	err := wb.Delete(key)
 	c.Assert(err, IsNil)
 }

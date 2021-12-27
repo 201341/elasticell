@@ -11,14 +11,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package storage
+package memory
 
 import (
 	"fmt"
 	"io/ioutil"
 	"os"
 
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/storage"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/goetty"
 	"github.com/pkg/errors"
 )
@@ -27,7 +28,7 @@ type memoryDataEngine struct {
 	kv *util.KVTree
 }
 
-func newMemoryDataEngine(kv *util.KVTree) DataEngine {
+func newMemoryDataEngine(kv *util.KVTree) storage.DataEngine {
 	return &memoryDataEngine{
 		kv: kv,
 	}

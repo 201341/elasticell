@@ -13,10 +13,10 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo
 
 import (
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/util"
 	gonemo "github.com/deepfabric/go-nemo"
 	"golang.org/x/net/context"
 )

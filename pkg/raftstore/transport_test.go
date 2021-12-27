@@ -3,7 +3,7 @@ package raftstore
 import (
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/pb/mraft"
+	"github.com/201341/elasticell/pkg/pb/mraft"
 	"github.com/fagongzi/util/task"
 	. "github.com/pingcap/check"
 )

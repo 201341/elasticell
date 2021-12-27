@@ -2,7 +2,7 @@
 DIST=/apps/deepfabric/dist
 
 pull() {
-    docker pull deepfabric/elasticell-build
+    docker pull 201341/elasticell-build
 }
 
 mk_dist() {
@@ -13,7 +13,7 @@ mk_dist() {
 }
 
 build_binary() {
-    docker run -it --rm -v $DIST:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=all -e ELASTICELL_BUILD_VERSION=$1 deepfabric/elasticell-build
+    docker run -it --rm -v $DIST:/apps/deepfabric/dist -e ELASTICELL_BUILD_TARGET=all -e ELASTICELL_BUILD_VERSION=$1 201341/elasticell-build
     mv $DIST/$1/* ./dist
     rm -rf $DIST
 }

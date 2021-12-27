@@ -16,8 +16,8 @@ package pdserver
 import (
 	"math"
 
+	meta "github.com/201341/elasticell/pkg/pb/metapb"
 	"github.com/fagongzi/log"
-	meta "github.com/deepfabric/elasticell/pkg/pb/metapb"
 )
 
 const replicaBaseScore = 100

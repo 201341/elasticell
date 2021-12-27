@@ -14,9 +14,9 @@
 package pdserver
 
 import (
+	"github.com/201341/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pd"
 	"github.com/fagongzi/log"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
-	"github.com/deepfabric/elasticell/pkg/pd"
 )
 
 func (s *Server) resetLeaderRPCProxy(leader *pdpb.Leader) {

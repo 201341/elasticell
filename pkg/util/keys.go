@@ -17,7 +17,7 @@ import (
 	"encoding/binary"
 	"hash/crc64"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
 	"github.com/fagongzi/goetty"
 )
 

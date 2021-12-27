@@ -16,8 +16,8 @@ package pool
 import (
 	"sync"
 
-	"github.com/deepfabric/elasticell/pkg/pb/mraft"
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/pb/mraft"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
 )
 
 var (

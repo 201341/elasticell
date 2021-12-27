@@ -9,15 +9,15 @@ import (
 	"io"
 	"math"
 
-	errorpb "github.com/deepfabric/elasticell/pkg/pb/errorpb"
+	errorpb "github.com/201341/elasticell/pkg/pb/errorpb"
 
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/golang/protobuf/proto"
 
 	math_bits "math/bits"
 
-	metapb "github.com/deepfabric/elasticell/pkg/pb/metapb"
-	pdpb "github.com/deepfabric/elasticell/pkg/pb/pdpb"
+	metapb "github.com/201341/elasticell/pkg/pb/metapb"
+	pdpb "github.com/201341/elasticell/pkg/pb/pdpb"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

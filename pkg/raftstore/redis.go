@@ -1,6 +1,6 @@
 package raftstore
 
-import "github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+import "github.com/201341/elasticell/pkg/pb/raftcmdpb"
 
 func (s *Store) initRedisHandle() {
 	// write

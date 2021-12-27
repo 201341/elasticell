@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/201341/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pdapi"
 	"github.com/fagongzi/log"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
-	"github.com/deepfabric/elasticell/pkg/pdapi"
 )
 
 func (s *Server) getInitParams() (*pdapi.InitParams, error) {

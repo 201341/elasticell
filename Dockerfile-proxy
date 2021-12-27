@@ -1,13 +1,13 @@
 FROM deepfabric/build as builder
 
-COPY . /root/go/src/github.com/deepfabric/elasticell
-WORKDIR /root/go/src/github.com/deepfabric/elasticell
+COPY . /root/go/src/github.com/201341/elasticell
+WORKDIR /root/go/src/github.com/201341/elasticell
 
 RUN make proxy
 
 FROM alpine:latest
 
-COPY --from=builder /root/go/src/github.com/deepfabric/elasticell/dist/proxy /usr/local/bin/proxy
+COPY --from=builder /root/go/src/github.com/201341/elasticell/dist/proxy /usr/local/bin/proxy
 
 RUN mkdir -p /var/proxy/
 RUN mkdir -p /var/lib/proxy/

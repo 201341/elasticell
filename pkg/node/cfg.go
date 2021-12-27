@@ -14,8 +14,8 @@
 package node
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/raftstore"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/raftstore"
 )
 
 // Cfg node cfg

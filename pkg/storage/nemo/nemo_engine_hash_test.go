@@ -13,7 +13,7 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo 
 
 import (
 	"os"

@@ -26,9 +26,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
-	"github.com/deepfabric/elasticell/pkg/server"
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/server"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/log"
 )
 

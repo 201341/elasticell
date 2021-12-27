@@ -14,16 +14,16 @@
 package pd
 
 import (
+	"context"
 	"sync"
 	"time"
-	"context"
 
-	"github.com/deepfabric/elasticell/pkg/pb"
-	"github.com/deepfabric/elasticell/pkg/pb/pdpb"
+	"github.com/201341/elasticell/pkg/pb"
+	"github.com/201341/elasticell/pkg/pb/pdpb"
+	"github.com/fagongzi/log"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
-	"github.com/fagongzi/log"
 )
 
 var (

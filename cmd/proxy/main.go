@@ -20,9 +20,9 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/201341/elasticell/pkg/proxy"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/fagongzi/log"
-	"github.com/deepfabric/elasticell/pkg/proxy"
-	"github.com/deepfabric/elasticell/pkg/util"
 )
 
 var (

@@ -16,7 +16,7 @@ package util
 import (
 	"testing"
 
-	"github.com/deepfabric/elasticell/pkg/pb/metapb"
+	"github.com/201341/elasticell/pkg/pb/metapb"
 )
 
 func TestTree(t *testing.T) {

@@ -16,8 +16,8 @@ package server
 import (
 	"encoding/json"
 
-	"github.com/deepfabric/elasticell/pkg/node"
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/node"
+	"github.com/201341/elasticell/pkg/util"
 	"github.com/pkg/errors"
 )
 

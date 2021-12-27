@@ -13,11 +13,12 @@
 
 // +build freebsd openbsd netbsd dragonfly linux
 
-package storage
+package nemo
 
 import (
 	"runtime"
 
+	"github.com/201341/elasticell/pkg/storage"
 	gonemo "github.com/deepfabric/go-nemo"
 )
 
@@ -30,17 +31,17 @@ type NemoCfg struct {
 
 type nemoDrvier struct {
 	db         *gonemo.NEMO
-	metaEngine Engine
-	dataEngine DataEngine
-	kvEngine   KVEngine
-	hashEngine HashEngine
-	listEngine ListEngine
-	setEngine  SetEngine
-	zsetEngine ZSetEngine
+	metaEngine storage.Engine
+	dataEngine storage.DataEngine
+	kvEngine   storage.KVEngine
+	hashEngine storage.HashEngine
+	listEngine storage.ListEngine
+	setEngine  storage.SetEngine
+	zsetEngine storage.ZSetEngine
 }
 
 // NewNemoDriver return a driver implemention by nemo
-func NewNemoDriver(cfg *NemoCfg) (Driver, error) {
+func NewNemoDriver(cfg *NemoCfg) (storage.Driver, error) {
 	var opts *gonemo.Options
 
 	if cfg.OptionPath != "" {
@@ -74,40 +75,40 @@ func (n *nemoDrvier) init(cfg *NemoCfg) {
 	n.zsetEngine = newNemoZSetEngine(n.db, cfg)
 }
 
-func (n *nemoDrvier) GetEngine() Engine {
+func (n *nemoDrvier) GetEngine() storage.Engine {
 	return n.metaEngine
 }
 
-func (n *nemoDrvier) GetDataEngine() DataEngine {
+func (n *nemoDrvier) GetDataEngine() storage.DataEngine {
 	return n.dataEngine
 }
 
-func (n *nemoDrvier) GetKVEngine() KVEngine {
+func (n *nemoDrvier) GetKVEngine() storage.KVEngine {
 	return n.kvEngine
 }
 
-func (n *nemoDrvier) GetHashEngine() HashEngine {
+func (n *nemoDrvier) GetHashEngine() storage.HashEngine {
 	return n.hashEngine
 }
 
-func (n *nemoDrvier) GetListEngine() ListEngine {
+func (n *nemoDrvier) GetListEngine() storage.ListEngine {
 	return n.listEngine
 }
 
-func (n *nemoDrvier) GetSetEngine() SetEngine {
+func (n *nemoDrvier) GetSetEngine() storage.SetEngine {
 	return n.setEngine
 }
 
-func (n *nemoDrvier) GetZSetEngine() ZSetEngine {
+func (n *nemoDrvier) GetZSetEngine() storage.ZSetEngine {
 	return n.zsetEngine
 }
 
-func (n *nemoDrvier) NewWriteBatch() WriteBatch {
+func (n *nemoDrvier) NewWriteBatch() storage.WriteBatch {
 	wb := gonemo.NewWriteBatch()
 	return newNemoWriteBatch(wb)
 }
 
-func (n *nemoDrvier) Write(wb WriteBatch, sync bool) error {
+func (n *nemoDrvier) Write(wb storage.WriteBatch, sync bool) error {
 	nwb := wb.(*nemoWriteBatch)
 	return n.db.BatchWrite(n.db.GetMetaHandle(), nwb.wb, sync)
 }

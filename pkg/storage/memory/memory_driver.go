@@ -11,12 +11,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package storage
+package memory
 
 import (
 	"sync"
 
-	"github.com/deepfabric/elasticell/pkg/util"
+	"github.com/201341/elasticell/pkg/storage"
+
+	"github.com/201341/elasticell/pkg/util"
 )
 
 type opt struct {
@@ -31,7 +33,7 @@ type memoryWriteBatch struct {
 	opts []*opt
 }
 
-func newMemoryWriteBatch() WriteBatch {
+func newMemoryWriteBatch() storage.WriteBatch {
 	return &memoryWriteBatch{}
 }
 
@@ -60,17 +62,17 @@ func (wb *memoryWriteBatch) Set(key []byte, value []byte) error {
 }
 
 type memoryDriver struct {
-	metaEngine Engine
-	dataEngine DataEngine
-	kvEngine   KVEngine
-	hashEngine HashEngine
-	listEngine ListEngine
-	setEngine  SetEngine
-	zsetEngine ZSetEngine
+	metaEngine storage.Engine
+	dataEngine storage.DataEngine
+	kvEngine   storage.KVEngine
+	hashEngine storage.HashEngine
+	listEngine storage.ListEngine
+	setEngine  storage.SetEngine
+	zsetEngine storage.ZSetEngine
 }
 
 // NewMemoryDriver returns Driver with memory implemention
-func NewMemoryDriver() Driver {
+func NewMemoryDriver() storage.Driver {
 	kv := util.NewKVTree()
 	return &memoryDriver{
 		metaEngine: newMemoryMetaEngine(),
@@ -79,39 +81,39 @@ func NewMemoryDriver() Driver {
 	}
 }
 
-func (d *memoryDriver) GetEngine() Engine {
+func (d *memoryDriver) GetEngine() storage.Engine {
 	return d.metaEngine
 }
 
-func (d *memoryDriver) GetDataEngine() DataEngine {
+func (d *memoryDriver) GetDataEngine() storage.DataEngine {
 	return d.dataEngine
 }
 
-func (d *memoryDriver) GetKVEngine() KVEngine {
+func (d *memoryDriver) GetKVEngine() storage.KVEngine {
 	return d.kvEngine
 }
 
-func (d *memoryDriver) GetHashEngine() HashEngine {
+func (d *memoryDriver) GetHashEngine() storage.HashEngine {
 	return d.hashEngine
 }
 
-func (d *memoryDriver) GetListEngine() ListEngine {
+func (d *memoryDriver) GetListEngine() storage.ListEngine {
 	return d.listEngine
 }
 
-func (d *memoryDriver) GetSetEngine() SetEngine {
+func (d *memoryDriver) GetSetEngine() storage.SetEngine {
 	return d.setEngine
 }
 
-func (d *memoryDriver) GetZSetEngine() ZSetEngine {
+func (d *memoryDriver) GetZSetEngine() storage.ZSetEngine {
 	return d.zsetEngine
 }
 
-func (d *memoryDriver) NewWriteBatch() WriteBatch {
+func (d *memoryDriver) NewWriteBatch() storage.WriteBatch {
 	return newMemoryWriteBatch()
 }
 
-func (d *memoryDriver) Write(wb WriteBatch, sync bool) error {
+func (d *memoryDriver) Write(wb storage.WriteBatch, sync bool) error {
 	mwb := wb.(*memoryWriteBatch)
 
 	for _, opt := range mwb.opts {

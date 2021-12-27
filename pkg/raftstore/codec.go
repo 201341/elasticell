@@ -14,8 +14,8 @@
 package raftstore
 
 import (
-	"github.com/deepfabric/elasticell/pkg/pb/mraft"
-	"github.com/deepfabric/elasticell/pkg/pool"
+	"github.com/201341/elasticell/pkg/pb/mraft"
+	"github.com/201341/elasticell/pkg/pool"
 	"github.com/fagongzi/goetty"
 	"github.com/fagongzi/log"
 	"github.com/fagongzi/util/protoc"

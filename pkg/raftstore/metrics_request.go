@@ -3,7 +3,7 @@ package raftstore
 import (
 	"time"
 
-	"github.com/deepfabric/elasticell/pkg/pb/raftcmdpb"
+	"github.com/201341/elasticell/pkg/pb/raftcmdpb"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

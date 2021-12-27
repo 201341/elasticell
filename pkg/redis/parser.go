@@ -16,12 +16,12 @@ package redis
 import (
 	"errors"
 
-	"github.com/deepfabric/elasticell/pkg/pool"
+	"github.com/201341/elasticell/pkg/pool"
 	"github.com/fagongzi/goetty"
 	gredis "github.com/fagongzi/goetty/protocol/redis"
-	pe "github.com/pkg/errors"
 	"github.com/fagongzi/log"
 	"github.com/fagongzi/util/protoc"
+	pe "github.com/pkg/errors"
 )
 
 var (
